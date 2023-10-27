@@ -1,51 +1,44 @@
-# gudlift-registration
+README.md pour le dépôt Python_Testing (Branche : QA)
+Aperçu
+Le dépôt Python_Testing, spécifiquement dans la branche QA, est une application web basée sur Flask. Elle est conçue pour gérer et réserver des places dans des compétitions sportives. L'application permet aux utilisateurs de voir, réserver et gérer les points des clubs et les places des compétitions.
 
-1. Why
+Fonctionnalités Clés
+Authentification des Utilisateurs : Les utilisateurs peuvent se connecter en utilisant leur email.
+Voir les Compétitions : Lister et voir les détails des compétitions sportives à venir.
+Réserver des Places : Réserver des places pour les compétitions.
+Gérer les Points des Clubs : Voir et gérer les points pour différents clubs.
+Modèles Réactifs : L'application utilise des modèles Flask pour une interface utilisateur dynamique et réactive.
+Composants Principaux
+Serveur (server.py) : Le fichier principal de l'application Flask. Il inclut des routes pour gérer différentes fonctionnalités comme voir les compétitions, réserver des places et gérer les points.
+Voir le Fichier Serveur
+Fichiers de Données : Fichiers JSON pour stocker les données des clubs et des compétitions.
+Données des Clubs (clubs.json) : Contient des informations sur les clubs.
+Voir les Données des Clubs
+Données des Compétitions (competitions.json) : Contient les détails des compétitions.
+Voir les Données des Compétitions
+Modèles : Modèles HTML pour le rendu des pages web.
+Réservation (booking.html) : Modèle pour la réservation de places pour les compétitions.
+Accueil (index.html) : Le modèle de la page d'accueil.
+Affichage des Points (points.html) : Modèle pour afficher les points des clubs.
+Bienvenue (welcome.html) : Modèle affiché après la connexion.
+Voir le Répertoire des Modèles
+Installation et Configuration
+Cloner le Dépôt :
+bash
+Copy code
+git clone -b QA https://github.com/Laseguue/Python_Testing.git
+Installer les Dépendances :
+Copy code
+pip install -r requirements.txt
+Voir le Fichier des Prérequis
+Exécuter l'Application :
+Copy code
+python server.py
+Utilisation
+Démarrez le serveur Flask et naviguez vers l'URL locale fournie (habituellement http://127.0.0.1:5000/).
+Utilisez l'application pour voir les compétitions, réserver des places et gérer les points des clubs.
+Contribuer
+Les contributions au projet sont les bienvenues. Veuillez suivre les procédures standard pour contribuer aux projets open-source sur GitHub.
 
-
-    This is a proof of concept (POC) project to show a light-weight version of our competition booking platform. The aim is the keep things as light as possible, and use feedback from the users to iterate.
-
-2. Getting Started
-
-    This project uses the following technologies:
-
-    * Python v3.x+
-
-    * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-
-        Whereas Django does a lot of things for us out of the box, Flask allows us to add only what we need. 
-     
-
-    * [Virtual environment](https://virtualenv.pypa.io/en/stable/installation.html)
-
-        This ensures you'll be able to install the correct packages without interfering with Python on your machine.
-
-        Before you begin, please ensure you have this installed globally. 
-
-
-3. Installation
-
-    - After cloning, change into the directory and type <code>virtualenv .</code>. This will then set up a a virtual python environment within that directory.
-
-    - Next, type <code>source bin/activate</code>. You should see that your command prompt has changed to the name of the folder. This means that you can install packages in here without affecting affecting files outside. To deactivate, type <code>deactivate</code>
-
-    - Rather than hunting around for the packages you need, you can install in one step. Type <code>pip install -r requirements.txt</code>. This will install all the packages listed in the respective file. If you install a package, make sure others know by updating the requirements.txt file. An easy way to do this is <code>pip freeze > requirements.txt</code>
-
-    - Flask requires that you set an environmental variable to the python file. However you do that, you'll want to set the file to be <code>server.py</code>. Check [here](https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application) for more details
-
-    - You should now be ready to test the application. In the directory, type either <code>flask run</code> or <code>python -m flask run</code>. The app should respond with an address you should be able to go to using your browser.
-
-4. Current Setup
-
-    The app is powered by [JSON files](https://www.tutorialspoint.com/json/json_quick_guide.htm). This is to get around having a DB until we actually need one. The main ones are:
-     
-    * competitions.json - list of competitions
-    * clubs.json - list of clubs with relevant information. You can look here to see what email addresses the app will accept for login.
-
-5. Testing
-
-    You are free to use whatever testing framework you like-the main thing is that you can show what tests you are using.
-
-    We also like to show how well we're testing, so there's a module called 
-    [coverage](https://coverage.readthedocs.io/en/coverage-5.1/) you should add to your project.
-
+Licence
+Le projet est open-source sous la Licence MIT.
